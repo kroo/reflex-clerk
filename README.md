@@ -51,7 +51,7 @@ Further documentation can be found in [the reference docs](docs/)
 
 ## License
 
-MIT
+Apache-2.0
 
 ## Contributing
 

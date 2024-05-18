@@ -17,9 +17,12 @@ dependencies = ["reflex>=0.5.0"]
 classifiers = ["Development Status :: 4 - Beta"]
 
 [project.urls]
+homepage = "https://kroo.github.io/reflex-clerk/"
+source = "https://github.com/kroo/reflex-clerk"
 
 [project.optional-dependencies]
 dev = ["build", "twine"]
+
 
 [tool.setuptools.packages.find]
 where = ["custom_components"]

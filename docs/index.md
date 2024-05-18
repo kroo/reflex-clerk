@@ -19,10 +19,6 @@ User Management Platform.
 
 Install with pip install:
 
-!!! warning "Important"
-   
-      **This next line doesn't currently work!** This project hasn't been added to pypi yet, as it's still a work in progress.
-
 ```bash
 pip install reflex-clerk
 ```
