@@ -1,0 +1,2824 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../clerk_provider/">
+      
+      
+        <link rel="next" href="../control_components/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
+    
+    
+      
+        <title>UI Components - Reflex Clerk</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ui-components" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Reflex Clerk" class="md-header__button md-logo" aria-label="Reflex Clerk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Reflex Clerk
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UI Components
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Reflex Clerk" class="md-nav__button md-logo" aria-label="Reflex Clerk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Reflex Clerk
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page_setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Page Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clerk_state/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auth State
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Components
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Components
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clerk_provider/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ClerkProvider Component
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UI Components
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UI Components
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Buttons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signinbutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;SignInButton /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<SignInButton />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.sign_in_button" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign_in_button
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signupbutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;SignUpButton /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<SignUpButton />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.sign_up_button" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign_up_button
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signoutbutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;SignOutButton /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<SignOutButton />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.sign_out_button" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign_out_button
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#userbutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;UserButton /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<UserButton />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.user_button" class="md-nav__link">
+    <span class="md-ellipsis">
+      user_button
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signin" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;SignIn /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<SignIn />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.sign_in" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign_in
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signup" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;SignUp /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<SignUp />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.sign_up" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign_up
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#userprofile" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;UserProfile /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<UserProfile />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.user_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      user_profile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../control_components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control Components
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Buttons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signinbutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;SignInButton /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<SignInButton />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.sign_in_button" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign_in_button
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signupbutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;SignUpButton /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<SignUpButton />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.sign_up_button" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign_up_button
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signoutbutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;SignOutButton /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<SignOutButton />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.sign_out_button" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign_out_button
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#userbutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;UserButton /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<UserButton />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.user_button" class="md-nav__link">
+    <span class="md-ellipsis">
+      user_button
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signin" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;SignIn /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<SignIn />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.sign_in" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign_in
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signup" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;SignUp /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<SignUp />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.sign_up" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign_up
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#userprofile" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;UserProfile /&gt;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<UserProfile />">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflex_clerk.user_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      user_profile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ui-components">UI Components<a class="headerlink" href="#ui-components" title="Permanent link">&para;</a></h1>
+<h2 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">&para;</a></h2>
+<h3 id="signinbutton">&lt;SignInButton /&gt;<a class="headerlink" href="#signinbutton" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p><img alt="SignInButton" src="../images/signin.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+<span class="kn">import</span> <span class="nn">reflex</span> <span class="k">as</span> <span class="nn">rx</span>
+
+<span class="n">clerk</span><span class="o">.</span><span class="n">sign_in_button</span><span class="p">(</span>
+    <span class="n">rx</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;Sign In&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="reflex_clerk.sign_in_button" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.sign_in_button</span>
+
+
+<a href="#reflex_clerk.sign_in_button" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">sign_in_button</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+    <span class="n">force_redirect_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fallback_redirect_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">sign_up_force_redirect_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">sign_up_fallback_redirect_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;redirect&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <SignInButton> component is a button that links to the sign-in page or displays the sign-in modal.</p>
+<p>This button is un-styled, and is intended to wrap around an rx.button component.</p>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+
+<span class="k">def</span> <span class="nf">page</span><span class="p">():</span>
+    <span class="n">clerk</span><span class="o">.</span><span class="n">clerk_provider</span><span class="p">(</span>
+        <span class="n">rx</span><span class="o">.</span><span class="n">box</span><span class="p">(</span>
+            <span class="n">clerk</span><span class="o">.</span><span class="n">sign_in_button</span><span class="p">(</span>
+                <span class="n">rx</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;Sign In&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">),</span>
+        <span class="n">publishable_key</span><span class="o">=</span><span class="s2">&quot;pk_my_publishable_key&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>*children</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="reflex.Component" href="https://reflex.dev/docs/api-reference/component/#component">Component</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Zero or more child components that will be rendered inside the sign-in button.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The URL to redirect to after the user successfully signs in. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fallback_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The URL to redirect to if an error occurs during the sign-in process. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sign_up_force_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The URL to redirect to after the user successfully signs up. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sign_up_fallback_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The URL to redirect to if an error occurs during the sign-up process. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>mode</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal">Literal</a>[&#39;redirect&#39;, &#39;modal&#39;]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The mode of the sign-in button. It can be either 'redirect' or 'modal'. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;redirect&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.sign_in.SignInButton">SignInButton</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A SignInButton component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/sign_in.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">sign_in_button</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">,</span>
+        <span class="n">force_redirect_url</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">fallback_redirect_url</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sign_up_force_redirect_url</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sign_up_fallback_redirect_url</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">mode</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;redirect&#39;</span><span class="p">,</span> <span class="s1">&#39;modal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;redirect&#39;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignInButton</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;SignInButton&gt; component is a button that links to the sign-in page or displays the sign-in modal.</span>
+
+<span class="sd">    This button is un-styled, and is intended to wrap around an rx.button component.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        ```python</span>
+<span class="sd">        import reflex_clerk as clerk</span>
+
+<span class="sd">        def page():</span>
+<span class="sd">            clerk.clerk_provider(</span>
+<span class="sd">                rx.box(</span>
+<span class="sd">                    clerk.sign_in_button(</span>
+<span class="sd">                        rx.button(&quot;Sign In&quot;)</span>
+<span class="sd">                    )</span>
+<span class="sd">                ),</span>
+<span class="sd">                publishable_key=&quot;pk_my_publishable_key&quot;</span>
+<span class="sd">            )</span>
+<span class="sd">        ```</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *children: Zero or more child components that will be rendered inside the sign-in button.</span>
+<span class="sd">        force_redirect_url: The URL to redirect to after the user successfully signs in. Defaults to None.</span>
+<span class="sd">        fallback_redirect_url: The URL to redirect to if an error occurs during the sign-in process. Defaults to None.</span>
+<span class="sd">        sign_up_force_redirect_url: The URL to redirect to after the user successfully signs up. Defaults to None.</span>
+<span class="sd">        sign_up_fallback_redirect_url: The URL to redirect to if an error occurs during the sign-up process. Defaults to None.</span>
+<span class="sd">        mode: The mode of the sign-in button. It can be either &#39;redirect&#39; or &#39;modal&#39;. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SignInButton component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">SignInButton</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+        <span class="n">force_redirect_url</span><span class="o">=</span><span class="n">force_redirect_url</span><span class="p">,</span>
+        <span class="n">fallback_redirect_url</span><span class="o">=</span><span class="n">fallback_redirect_url</span><span class="p">,</span>
+        <span class="n">sign_up_force_redirect_url</span><span class="o">=</span><span class="n">sign_up_force_redirect_url</span><span class="p">,</span>
+        <span class="n">sign_up_fallback_redirect_url</span><span class="o">=</span><span class="n">sign_up_fallback_redirect_url</span><span class="p">,</span>
+        <span class="n">mode</span><span class="o">=</span><span class="n">mode</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div><h3 id="signupbutton">&lt;SignUpButton /&gt;<a class="headerlink" href="#signupbutton" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p><img alt="SignUpButton" src="../images/signup.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+<span class="kn">import</span> <span class="nn">reflex</span> <span class="k">as</span> <span class="nn">rx</span>
+
+<span class="n">clerk</span><span class="o">.</span><span class="n">sign_up_button</span><span class="p">(</span>
+    <span class="n">rx</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;Sign Up&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="reflex_clerk.sign_up_button" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.sign_up_button</span>
+
+
+<a href="#reflex_clerk.sign_up_button" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">sign_up_button</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+    <span class="n">force_redirect_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fallback_redirect_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">sign_in_force_redirect_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">sign_in_fallback_redirect_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;redirect&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <SignUpButton> component is a button that links to the sign-up page
+or displays the sign-up modal.</p>
+<p>This button is un-styled, and is intended to wrap around an rx.button component.</p>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+
+<span class="k">def</span> <span class="nf">page</span><span class="p">():</span>
+    <span class="n">clerk</span><span class="o">.</span><span class="n">clerk_provider</span><span class="p">(</span>
+        <span class="n">rx</span><span class="o">.</span><span class="n">box</span><span class="p">(</span>
+            <span class="n">clerk</span><span class="o">.</span><span class="n">sign_up_button</span><span class="p">(</span>
+                <span class="n">rx</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;Sign Up&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">),</span>
+        <span class="n">publishable_key</span><span class="o">=</span><span class="s2">&quot;pk_my_publishable_key&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>force_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The URL to redirect to after the user successfully signs in. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fallback_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The URL to redirect to if an error occurs during the sign-in process. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sign_in_force_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The URL to redirect to after the user successfully signs up. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sign_in_fallback_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The URL to redirect to if an error occurs during the sign-up process. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>mode</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal">Literal</a>[&#39;redirect&#39;, &#39;modal&#39;]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The mode of the sign-up button. It can be either 'redirect' or 'modal'. Defaults to 'redirect'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;redirect&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.sign_up.SignUpButton">SignUpButton</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A SignUpButton component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/sign_up.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">sign_up_button</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">,</span>
+        <span class="n">force_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">fallback_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sign_in_force_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sign_in_fallback_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">mode</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;redirect&#39;</span><span class="p">,</span> <span class="s1">&#39;modal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;redirect&#39;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignUpButton</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;SignUpButton&gt; component is a button that links to the sign-up page</span>
+<span class="sd">    or displays the sign-up modal.</span>
+
+<span class="sd">    This button is un-styled, and is intended to wrap around an rx.button component.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        ```python</span>
+<span class="sd">        import reflex_clerk as clerk</span>
+
+<span class="sd">        def page():</span>
+<span class="sd">            clerk.clerk_provider(</span>
+<span class="sd">                rx.box(</span>
+<span class="sd">                    clerk.sign_up_button(</span>
+<span class="sd">                        rx.button(&quot;Sign Up&quot;)</span>
+<span class="sd">                    )</span>
+<span class="sd">                ),</span>
+<span class="sd">                publishable_key=&quot;pk_my_publishable_key&quot;</span>
+<span class="sd">            )</span>
+<span class="sd">        ```</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        force_redirect_url: The URL to redirect to after the user successfully signs in. Defaults to None.</span>
+<span class="sd">        fallback_redirect_url: The URL to redirect to if an error occurs during the sign-in process. Defaults to None.</span>
+<span class="sd">        sign_in_force_redirect_url: The URL to redirect to after the user successfully signs up. Defaults to None.</span>
+<span class="sd">        sign_in_fallback_redirect_url: The URL to redirect to if an error occurs during the sign-up process. Defaults to None.</span>
+<span class="sd">        mode: The mode of the sign-up button. It can be either &#39;redirect&#39; or &#39;modal&#39;. Defaults to &#39;redirect&#39;.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SignUpButton component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">SignUpButton</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+        <span class="n">force_redirect_url</span><span class="o">=</span><span class="n">force_redirect_url</span><span class="p">,</span>
+        <span class="n">fallback_redirect_url</span><span class="o">=</span><span class="n">fallback_redirect_url</span><span class="p">,</span>
+        <span class="n">sign_in_force_redirect_url</span><span class="o">=</span><span class="n">sign_in_force_redirect_url</span><span class="p">,</span>
+        <span class="n">sign_in_fallback_redirect_url</span><span class="o">=</span><span class="n">sign_in_fallback_redirect_url</span><span class="p">,</span>
+        <span class="n">mode</span><span class="o">=</span><span class="n">mode</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div><h3 id="signoutbutton">&lt;SignOutButton /&gt;<a class="headerlink" href="#signoutbutton" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p><img alt="SignOutButton" src="../images/logout.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+<span class="kn">import</span> <span class="nn">reflex</span> <span class="k">as</span> <span class="nn">rx</span>
+
+<span class="n">clerk</span><span class="o">.</span><span class="n">sign_out_button</span><span class="p">(</span>
+    <span class="n">rx</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;Sign Out&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="reflex_clerk.sign_out_button" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.sign_out_button</span>
+
+
+<a href="#reflex_clerk.sign_out_button" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">sign_out_button</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">redirect_url</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <SignOutButton> component is a button that signs out the user and redirects them to a specified URL.</p>
+<p>This button is un-styled, and is intended to wrap around an rx.button component.</p>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+
+<span class="k">def</span> <span class="nf">page</span><span class="p">():</span>
+    <span class="n">clerk</span><span class="o">.</span><span class="n">clerk_provider</span><span class="p">(</span>
+        <span class="n">rx</span><span class="o">.</span><span class="n">box</span><span class="p">(</span>
+            <span class="n">clerk</span><span class="o">.</span><span class="n">sign_out_button</span><span class="p">(</span>
+                <span class="n">rx</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;Sign Out&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">),</span>
+        <span class="n">publishable_key</span><span class="o">=</span><span class="s2">&quot;pk_my_publishable_key&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>*children</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="reflex.Component" href="https://reflex.dev/docs/api-reference/component/#component">Component</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Zero or more child components that will be rendered inside the sign-out button.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>options</code></td>
+            <td>
+                  <code><span title="reflex_clerk.lib.sign_out.SignOutOptions">SignOutOptions</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Options for the sign-out button. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The URL to redirect to after sign-out. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.sign_out.SignOutButton">SignOutButton</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A SignOutButton component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/sign_out.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">sign_out_button</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">,</span>
+        <span class="n">options</span><span class="p">:</span> <span class="n">SignOutOptions</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignOutButton</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;SignOutButton&gt; component is a button that signs out the user and redirects them to a specified URL.</span>
+
+<span class="sd">    This button is un-styled, and is intended to wrap around an rx.button component.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        ```python</span>
+<span class="sd">        import reflex_clerk as clerk</span>
+
+<span class="sd">        def page():</span>
+<span class="sd">            clerk.clerk_provider(</span>
+<span class="sd">                rx.box(</span>
+<span class="sd">                    clerk.sign_out_button(</span>
+<span class="sd">                        rx.button(&quot;Sign Out&quot;)</span>
+<span class="sd">                    )</span>
+<span class="sd">                ),</span>
+<span class="sd">                publishable_key=&quot;pk_my_publishable_key&quot;</span>
+<span class="sd">            )</span>
+<span class="sd">        ```</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *children: Zero or more child components that will be rendered inside the sign-out button.</span>
+<span class="sd">        options: Options for the sign-out button. Defaults to None.</span>
+<span class="sd">        redirect_url: The URL to redirect to after sign-out. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SignOutButton component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">SignOutButton</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+        <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
+        <span class="n">redirect_url</span><span class="o">=</span><span class="n">redirect_url</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div><h3 id="userbutton">&lt;UserButton /&gt;<a class="headerlink" href="#userbutton" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p><img alt="UserButton" src="https://clerk.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F_docs%2Fmain%2Fui-components%2Fuser-button.svg&amp;w=1080&amp;q=75" /></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+
+<span class="n">clerk</span><span class="o">.</span><span class="n">user_button</span><span class="p">()</span>
+</code></pre></div>
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="reflex_clerk.user_button" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.user_button</span>
+
+
+<a href="#reflex_clerk.user_button" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">user_button</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+    <span class="n">appearance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">show_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">sign_in_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">user_profile_mode</span><span class="o">=</span><span class="s2">&quot;modal&quot;</span><span class="p">,</span>
+    <span class="n">user_profile_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">after_sign_out_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">after_multi_session_single_sign_out_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">after_switch_session_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">default_open</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">user_profile_props</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <UserButton> component displays a user image button that can be configured with various options.</p>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+
+<span class="k">def</span> <span class="nf">page</span><span class="p">():</span>
+    <span class="n">clerk</span><span class="o">.</span><span class="n">clerk_provider</span><span class="p">(</span>
+        <span class="n">rx</span><span class="o">.</span><span class="n">box</span><span class="p">(</span>
+            <span class="n">clerk</span><span class="o">.</span><span class="n">user_button</span><span class="p">()</span>
+        <span class="p">),</span>
+        <span class="n">publishable_key</span><span class="o">=</span><span class="s2">&quot;pk_my_publishable_key&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>appearance</code></td>
+            <td>
+                  <code><span title="reflex_clerk.lib.appearance.Appearance">Appearance</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional object to style the component. Will only affect Clerk Components and not Account Portal pages.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>show_name</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Controls if the user name is displayed next to the user image button. Defaults to False.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sign_in_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Full URL or path to navigate to when the Add another account button is clicked.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>user_profile_mode</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal">Literal</a>[&#39;modal&#39;, &#39;navigation&#39;]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Controls whether clicking the Manage your account button will open the <UserProfile /> component as a modal or navigate to the userProfileUrl. Defaults to 'modal'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;modal&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>user_profile_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Full URL or path leading to the user management interface.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>after_sign_out_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Full URL or path to navigate to after signing out from all accounts. Defaults to '/'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>after_multi_session_single_sign_out_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Full URL or path to navigate to after signing out from the currently active account in multi-session apps.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>after_switch_session_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Full URL or path to navigate to after a successful account change in multi-session apps.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>default_open</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Controls whether the <UserButton /> should open by default during the first render. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>user_profile_props</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Options for the underlying <UserProfile /> component.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.user.UserButton">UserButton</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A UserButton component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/user.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">user_button</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">,</span>
+        <span class="n">appearance</span><span class="p">:</span> <span class="n">Appearance</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">show_name</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sign_in_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user_profile_mode</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;modal&#39;</span><span class="p">,</span> <span class="s1">&#39;navigation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;modal&#39;</span><span class="p">,</span>
+        <span class="n">user_profile_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">after_sign_out_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">after_multi_session_single_sign_out_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">after_switch_session_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">default_open</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user_profile_props</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UserButton</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;UserButton&gt; component displays a user image button that can be configured with various options.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        ```python</span>
+<span class="sd">        import reflex_clerk as clerk</span>
+
+<span class="sd">        def page():</span>
+<span class="sd">            clerk.clerk_provider(</span>
+<span class="sd">                rx.box(</span>
+<span class="sd">                    clerk.user_button()</span>
+<span class="sd">                ),</span>
+<span class="sd">                publishable_key=&quot;pk_my_publishable_key&quot;</span>
+<span class="sd">            )</span>
+<span class="sd">        ```</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        appearance: Optional object to style the component. Will only affect Clerk Components and not Account Portal pages.</span>
+<span class="sd">        show_name: Controls if the user name is displayed next to the user image button. Defaults to False.</span>
+<span class="sd">        sign_in_url: Full URL or path to navigate to when the Add another account button is clicked.</span>
+<span class="sd">        user_profile_mode: Controls whether clicking the Manage your account button will open the &lt;UserProfile /&gt; component as a modal or navigate to the userProfileUrl. Defaults to &#39;modal&#39;.</span>
+<span class="sd">        user_profile_url: Full URL or path leading to the user management interface.</span>
+<span class="sd">        after_sign_out_url: Full URL or path to navigate to after signing out from all accounts. Defaults to &#39;/&#39;.</span>
+<span class="sd">        after_multi_session_single_sign_out_url: Full URL or path to navigate to after signing out from the currently active account in multi-session apps.</span>
+<span class="sd">        after_switch_session_url: Full URL or path to navigate to after a successful account change in multi-session apps.</span>
+<span class="sd">        default_open: Controls whether the &lt;UserButton /&gt; should open by default during the first render. Defaults to None.</span>
+<span class="sd">        user_profile_props: Options for the underlying &lt;UserProfile /&gt; component.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A UserButton component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">UserButton</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+        <span class="n">appearance</span><span class="o">=</span><span class="n">appearance</span><span class="p">,</span>
+        <span class="n">show_name</span><span class="o">=</span><span class="n">show_name</span><span class="p">,</span>
+        <span class="n">sign_in_url</span><span class="o">=</span><span class="n">sign_in_url</span><span class="p">,</span>
+        <span class="n">user_profile_mode</span><span class="o">=</span><span class="n">user_profile_mode</span><span class="p">,</span>
+        <span class="n">user_profile_url</span><span class="o">=</span><span class="n">user_profile_url</span><span class="p">,</span>
+        <span class="n">after_sign_out_url</span><span class="o">=</span><span class="n">after_sign_out_url</span><span class="p">,</span>
+        <span class="n">after_multi_session_single_sign_out_url</span><span class="o">=</span><span class="n">after_multi_session_single_sign_out_url</span><span class="p">,</span>
+        <span class="n">after_switch_session_url</span><span class="o">=</span><span class="n">after_switch_session_url</span><span class="p">,</span>
+        <span class="n">default_open</span><span class="o">=</span><span class="n">default_open</span><span class="p">,</span>
+        <span class="n">user_profile_props</span><span class="o">=</span><span class="n">user_profile_props</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div><h2 id="authentication-components">Authentication Components<a class="headerlink" href="#authentication-components" title="Permanent link">&para;</a></h2>
+<h3 id="signin">&lt;SignIn /&gt;<a class="headerlink" href="#signin" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p><img alt="SignIn" src="https://clerk.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F_docs%2Fmain%2Fui-components%2Fsign-in.svg&amp;w=1080&amp;q=75" /></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+
+<span class="n">clerk</span><span class="o">.</span><span class="n">sign_in</span><span class="p">()</span>
+</code></pre></div>
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="reflex_clerk.sign_in"></a>
+    <div class="doc doc-contents first">
+
+      <p>The <SignIn> component renders a sign-in form.</p>
+<p>Instead of using this component directly, consider using the pre-configured sign-in
+page configured with <a class="autorefs autorefs-internal" href="../page_setup/#reflex_clerk.install_signin_page"><code>reflex_clerk.install_signin_page</code></a>.</p>
+<p>This form can be styled and configured with various routing and redirection options.</p>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+
+<span class="k">def</span> <span class="nf">page</span><span class="p">():</span>
+    <span class="n">clerk</span><span class="o">.</span><span class="n">clerk_provider</span><span class="p">(</span>
+        <span class="n">rx</span><span class="o">.</span><span class="n">box</span><span class="p">(</span>
+            <span class="n">rx</span><span class="o">.</span><span class="n">heading</span><span class="p">(</span><span class="s2">&quot;Welcome, please sign in!&quot;</span><span class="p">),</span>
+            <span class="n">clerk</span><span class="o">.</span><span class="n">sign_in</span><span class="p">()</span>
+        <span class="p">),</span>
+        <span class="n">publishable_key</span><span class="o">=</span><span class="s2">&quot;pk_my_publishable_key&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>appearance</code></td>
+            <td>
+                  <code><span title="reflex_clerk.lib.appearance.Appearance">Appearance</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The appearance configuration for the sign-in form.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>routing</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal">Literal</a>[&#39;hash&#39;, &#39;path&#39;, &#39;virtual&#39;]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The routing strategy for the pages. Can be 'hash', 'path', or 'virtual'. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The path where the component is mounted when routing is set to 'path'. Ignored for 'hash' and 'virtual' routing.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sign_up_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Full URL or path to the sign-up page.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>URL to redirect to after sign-in. Takes priority over deprecated props.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fallback_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Fallback URL to redirect to after sign-in if no redirect URL is provided in the path. Defaults to '/'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sign_up_force_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>URL to redirect to after sign-up. Takes priority over deprecated props.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sign_up_fallback_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Fallback URL to redirect to after sign-up if no redirect URL is provided in the path. Defaults to '/'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>initial_values</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<span title="reflex_clerk.lib.sign_in.SignInInitialValues">SignInInitialValues</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Prefilled values for the sign-in fields. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.sign_in.SignIn">SignIn</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A SignIn component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/sign_in.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">sign_in</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">,</span>
+        <span class="n">appearance</span><span class="p">:</span> <span class="n">Appearance</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">routing</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;hash&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="s1">&#39;virtual&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sign_up_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">force_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">fallback_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sign_up_force_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sign_up_fallback_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">initial_values</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="n">SignInInitialValues</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignIn</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;SignIn&gt; component renders a sign-in form.</span>
+
+<span class="sd">    Instead of using this component directly, consider using the pre-configured sign-in</span>
+<span class="sd">    page configured with [`reflex_clerk.install_signin_page`][].</span>
+
+<span class="sd">    This form can be styled and configured with various routing and redirection options.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        ```python</span>
+<span class="sd">        import reflex_clerk as clerk</span>
+
+<span class="sd">        def page():</span>
+<span class="sd">            clerk.clerk_provider(</span>
+<span class="sd">                rx.box(</span>
+<span class="sd">                    rx.heading(&quot;Welcome, please sign in!&quot;),</span>
+<span class="sd">                    clerk.sign_in()</span>
+<span class="sd">                ),</span>
+<span class="sd">                publishable_key=&quot;pk_my_publishable_key&quot;</span>
+<span class="sd">            )</span>
+<span class="sd">        ```</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        appearance: The appearance configuration for the sign-in form.</span>
+<span class="sd">        routing: The routing strategy for the pages. Can be &#39;hash&#39;, &#39;path&#39;, or &#39;virtual&#39;. Defaults to None.</span>
+<span class="sd">        path: The path where the component is mounted when routing is set to &#39;path&#39;. Ignored for &#39;hash&#39; and &#39;virtual&#39; routing.</span>
+<span class="sd">        sign_up_url: Full URL or path to the sign-up page.</span>
+<span class="sd">        force_redirect_url: URL to redirect to after sign-in. Takes priority over deprecated props.</span>
+<span class="sd">        fallback_redirect_url: Fallback URL to redirect to after sign-in if no redirect URL is provided in the path. Defaults to &#39;/&#39;.</span>
+<span class="sd">        sign_up_force_redirect_url: URL to redirect to after sign-up. Takes priority over deprecated props.</span>
+<span class="sd">        sign_up_fallback_redirect_url: Fallback URL to redirect to after sign-up if no redirect URL is provided in the path. Defaults to &#39;/&#39;.</span>
+<span class="sd">        initial_values: Prefilled values for the sign-in fields. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SignIn component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">SignIn</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+        <span class="n">appearance</span><span class="o">=</span><span class="n">appearance</span><span class="p">,</span>
+        <span class="n">routing</span><span class="o">=</span><span class="n">routing</span><span class="p">,</span>
+        <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span>
+        <span class="n">sign_up_url</span><span class="o">=</span><span class="n">sign_up_url</span><span class="p">,</span>
+        <span class="n">force_redirect_url</span><span class="o">=</span><span class="n">force_redirect_url</span><span class="p">,</span>
+        <span class="n">fallback_redirect_url</span><span class="o">=</span><span class="n">fallback_redirect_url</span><span class="p">,</span>
+        <span class="n">sign_up_force_redirect_url</span><span class="o">=</span><span class="n">sign_up_force_redirect_url</span><span class="p">,</span>
+        <span class="n">sign_up_fallback_redirect_url</span><span class="o">=</span><span class="n">sign_up_fallback_redirect_url</span><span class="p">,</span>
+        <span class="n">initial_values</span><span class="o">=</span><span class="n">initial_values</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div><h3 id="signup">&lt;SignUp /&gt;<a class="headerlink" href="#signup" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p><img alt="SignUp" src="https://clerk.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F_docs%2Fmain%2Fui-components%2Fsign-up.svg&amp;w=1080&amp;q=75" /></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+
+<span class="n">clerk</span><span class="o">.</span><span class="n">sign_up</span><span class="p">()</span>
+</code></pre></div>
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="reflex_clerk.sign_up"></a>
+    <div class="doc doc-contents first">
+
+      <p>The <SignUp> component renders a sign-up form.</p>
+<p>Instead of using this component directly, consider using the pre-configured sign-in
+page configured with <a class="autorefs autorefs-internal" href="../page_setup/#reflex_clerk.install_signup_page"><code>reflex_clerk.install_signup_page</code></a>.</p>
+<p>This form can be styled and configured with various routing and redirection options.</p>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+
+<span class="k">def</span> <span class="nf">page</span><span class="p">():</span>
+    <span class="n">clerk</span><span class="o">.</span><span class="n">clerk_provider</span><span class="p">(</span>
+        <span class="n">rx</span><span class="o">.</span><span class="n">box</span><span class="p">(</span>
+            <span class="n">rx</span><span class="o">.</span><span class="n">heading</span><span class="p">(</span><span class="s2">&quot;Welcome, please sign up!&quot;</span><span class="p">),</span>
+            <span class="n">clerk</span><span class="o">.</span><span class="n">sign_up</span><span class="p">()</span>
+        <span class="p">),</span>
+        <span class="n">publishable_key</span><span class="o">=</span><span class="s2">&quot;pk_my_publishable_key&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>appearance</code></td>
+            <td>
+                  <code><span title="reflex_clerk.lib.appearance.Appearance">Appearance</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The appearance configuration for the sign-up form.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>routing</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal">Literal</a>[&#39;hash&#39;, &#39;path&#39;, &#39;virtual&#39;]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The routing strategy for the pages. Can be 'hash', 'path', or 'virtual'. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The path where the component is mounted when routing is set to 'path'. Ignored for 'hash' and 'virtual' routing.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sign_in_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Full URL or path to the sign-in page.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>URL to redirect to after sign-in. Takes priority over deprecated props.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fallback_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Fallback URL to redirect to after sign-in if no redirect URL is provided in the path. Defaults to '/'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sign_in_force_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>URL to redirect to after sign-up. Takes priority over deprecated props.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sign_in_fallback_redirect_url</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Fallback URL to redirect to after sign-up if no redirect URL is provided in the path. Defaults to '/'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>initial_values</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<span title="reflex_clerk.lib.sign_up.SignUpInitialValues">SignUpInitialValues</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Prefilled values for the sign-up fields. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.sign_up.SignUp">SignUp</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A SignUp component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/sign_up.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">sign_up</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">,</span>
+        <span class="n">appearance</span><span class="p">:</span> <span class="n">Appearance</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">routing</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;hash&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="s1">&#39;virtual&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sign_in_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">force_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">fallback_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sign_in_force_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sign_in_fallback_redirect_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">initial_values</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="n">SignUpInitialValues</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignUp</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;SignUp&gt; component renders a sign-up form.</span>
+
+<span class="sd">    Instead of using this component directly, consider using the pre-configured sign-in</span>
+<span class="sd">    page configured with [`reflex_clerk.install_signup_page`][].</span>
+
+<span class="sd">    This form can be styled and configured with various routing and redirection options.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        ```python</span>
+<span class="sd">        import reflex_clerk as clerk</span>
+
+<span class="sd">        def page():</span>
+<span class="sd">            clerk.clerk_provider(</span>
+<span class="sd">                rx.box(</span>
+<span class="sd">                    rx.heading(&quot;Welcome, please sign up!&quot;),</span>
+<span class="sd">                    clerk.sign_up()</span>
+<span class="sd">                ),</span>
+<span class="sd">                publishable_key=&quot;pk_my_publishable_key&quot;</span>
+<span class="sd">            )</span>
+<span class="sd">        ```</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        appearance: The appearance configuration for the sign-up form.</span>
+<span class="sd">        routing: The routing strategy for the pages. Can be &#39;hash&#39;, &#39;path&#39;, or &#39;virtual&#39;. Defaults to None.</span>
+<span class="sd">        path: The path where the component is mounted when routing is set to &#39;path&#39;. Ignored for &#39;hash&#39; and &#39;virtual&#39; routing.</span>
+<span class="sd">        sign_in_url: Full URL or path to the sign-in page.</span>
+<span class="sd">        force_redirect_url: URL to redirect to after sign-in. Takes priority over deprecated props.</span>
+<span class="sd">        fallback_redirect_url: Fallback URL to redirect to after sign-in if no redirect URL is provided in the path. Defaults to &#39;/&#39;.</span>
+<span class="sd">        sign_in_force_redirect_url: URL to redirect to after sign-up. Takes priority over deprecated props.</span>
+<span class="sd">        sign_in_fallback_redirect_url: Fallback URL to redirect to after sign-up if no redirect URL is provided in the path. Defaults to &#39;/&#39;.</span>
+<span class="sd">        initial_values: Prefilled values for the sign-up fields. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SignUp component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">SignUp</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+        <span class="n">appearance</span><span class="o">=</span><span class="n">appearance</span><span class="p">,</span>
+        <span class="n">routing</span><span class="o">=</span><span class="n">routing</span><span class="p">,</span>
+        <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span>
+        <span class="n">sign_in_url</span><span class="o">=</span><span class="n">sign_in_url</span><span class="p">,</span>
+        <span class="n">force_redirect_url</span><span class="o">=</span><span class="n">force_redirect_url</span><span class="p">,</span>
+        <span class="n">fallback_redirect_url</span><span class="o">=</span><span class="n">fallback_redirect_url</span><span class="p">,</span>
+        <span class="n">sign_in_force_redirect_url</span><span class="o">=</span><span class="n">sign_in_force_redirect_url</span><span class="p">,</span>
+        <span class="n">sign_in_fallback_redirect_url</span><span class="o">=</span><span class="n">sign_in_fallback_redirect_url</span><span class="p">,</span>
+        <span class="n">initial_values</span><span class="o">=</span><span class="n">initial_values</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div><h3 id="userprofile">&lt;UserProfile /&gt;<a class="headerlink" href="#userprofile" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p><img alt="UserProfile" src="https://clerk.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F_docs%2Fmain%2Fui-components%2Fuser-profile.svg&amp;w=1920&amp;q=75" /></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+
+<span class="n">clerk</span><span class="o">.</span><span class="n">user_profile</span><span class="p">()</span>
+</code></pre></div>
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="reflex_clerk.user_profile" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.user_profile</span>
+
+
+<a href="#reflex_clerk.user_profile" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">user_profile</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">children</span><span class="p">,</span> <span class="n">appearance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">additional_oauth_scopes</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <UserProfile> component displays the user profile interface with various configuration options.</p>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">reflex_clerk</span> <span class="k">as</span> <span class="nn">clerk</span>
+
+<span class="k">def</span> <span class="nf">page</span><span class="p">():</span>
+    <span class="n">clerk</span><span class="o">.</span><span class="n">clerk_provider</span><span class="p">(</span>
+        <span class="n">rx</span><span class="o">.</span><span class="n">box</span><span class="p">(</span>
+            <span class="n">clerk</span><span class="o">.</span><span class="n">user_profile</span><span class="p">()</span>
+        <span class="p">),</span>
+        <span class="n">publishable_key</span><span class="o">=</span><span class="s2">&quot;pk_my_publishable_key&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>*children</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="reflex.Component" href="https://reflex.dev/docs/api-reference/component/#component">Component</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Zero or more child components that will be rendered inside the user profile component.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>appearance</code></td>
+            <td>
+                  <code><span title="reflex_clerk.lib.appearance.Appearance">Appearance</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional object to style the component. Will only affect Clerk Components and not Account Portal pages.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>additional_oauth_scopes</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Specify additional scopes per OAuth provider that your users would like to provide if not already approved. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.user.UserProfile">UserProfile</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A UserProfile component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/user.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">user_profile</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">,</span>
+        <span class="n">appearance</span><span class="p">:</span> <span class="n">Appearance</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">additional_oauth_scopes</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UserProfile</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;UserProfile&gt; component displays the user profile interface with various configuration options.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        ```python</span>
+<span class="sd">        import reflex_clerk as clerk</span>
+
+<span class="sd">        def page():</span>
+<span class="sd">            clerk.clerk_provider(</span>
+<span class="sd">                rx.box(</span>
+<span class="sd">                    clerk.user_profile()</span>
+<span class="sd">                ),</span>
+<span class="sd">                publishable_key=&quot;pk_my_publishable_key&quot;</span>
+<span class="sd">            )</span>
+<span class="sd">        ```</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *children: Zero or more child components that will be rendered inside the user profile component.</span>
+<span class="sd">        appearance: Optional object to style the component. Will only affect Clerk Components and not Account Portal pages.</span>
+<span class="sd">        additional_oauth_scopes: Specify additional scopes per OAuth provider that your users would like to provide if not already approved. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A UserProfile component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">UserProfile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+        <span class="n">appearance</span><span class="o">=</span><span class="n">appearance</span><span class="p">,</span>
+        <span class="n">additional_oauth_scopes</span><span class="o">=</span><span class="n">additional_oauth_scopes</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
+      
+    
+  </body>
+</html>

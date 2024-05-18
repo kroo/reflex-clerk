@@ -1,0 +1,1706 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ui_components/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
+    
+    
+      
+        <title>Control Components - Reflex Clerk</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#control-components" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Reflex Clerk" class="md-header__button md-logo" aria-label="Reflex Clerk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Reflex Clerk
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Control Components
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Reflex Clerk" class="md-nav__button md-logo" aria-label="Reflex Clerk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Reflex Clerk
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page_setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Page Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clerk_state/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auth State
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Components
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Components
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clerk_provider/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ClerkProvider Component
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui_components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Components
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Control Components
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Control Components
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.signed_in" class="md-nav__link">
+    <span class="md-ellipsis">
+      signed_in
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.signed_out" class="md-nav__link">
+    <span class="md-ellipsis">
+      signed_out
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.redirect_to_sign_in" class="md-nav__link">
+    <span class="md-ellipsis">
+      redirect_to_sign_in
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.redirect_to_sign_up" class="md-nav__link">
+    <span class="md-ellipsis">
+      redirect_to_sign_up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.redirect_to_user_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      redirect_to_user_profile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.redirect_to_organization_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      redirect_to_organization_profile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.redirect_to_create_organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      redirect_to_create_organization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.multisession_app_support" class="md-nav__link">
+    <span class="md-ellipsis">
+      multisession_app_support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.clerk_loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      clerk_loading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.clerk_loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      clerk_loaded
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.protect" class="md-nav__link">
+    <span class="md-ellipsis">
+      protect
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.signed_in" class="md-nav__link">
+    <span class="md-ellipsis">
+      signed_in
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.signed_out" class="md-nav__link">
+    <span class="md-ellipsis">
+      signed_out
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.redirect_to_sign_in" class="md-nav__link">
+    <span class="md-ellipsis">
+      redirect_to_sign_in
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.redirect_to_sign_up" class="md-nav__link">
+    <span class="md-ellipsis">
+      redirect_to_sign_up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.redirect_to_user_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      redirect_to_user_profile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.redirect_to_organization_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      redirect_to_organization_profile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.redirect_to_create_organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      redirect_to_create_organization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.multisession_app_support" class="md-nav__link">
+    <span class="md-ellipsis">
+      multisession_app_support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.clerk_loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      clerk_loading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.clerk_loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      clerk_loaded
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflex_clerk.protect" class="md-nav__link">
+    <span class="md-ellipsis">
+      protect
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="control-components">Control Components<a class="headerlink" href="#control-components" title="Permanent link">&para;</a></h1>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="reflex_clerk.signed_in" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.signed_in</span>
+
+
+<a href="#reflex_clerk.signed_in" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">signed_in</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <SignedIn> component renders its children only if there's a User with an active Session signed in your application.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>*children</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="reflex.Component" href="https://reflex.dev/docs/api-reference/component/#component">Component</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Zero or more child components that will be rendered inside the SignedIn component.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.control.SignedIn">SignedIn</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A SignedIn component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/control.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">signed_in</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignedIn</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;SignedIn&gt; component renders its children only if there&#39;s a User with an active Session signed in your application.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *children: Zero or more child components that will be rendered inside the SignedIn component.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SignedIn component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">SignedIn</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="reflex_clerk.signed_out" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.signed_out</span>
+
+
+<a href="#reflex_clerk.signed_out" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">signed_out</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <SignedOut> component renders its children only if there's no User with an active Session signed in your application.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>*children</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="reflex.Component" href="https://reflex.dev/docs/api-reference/component/#component">Component</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Zero or more child components that will be rendered inside the SignedOut component.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.control.SignedOut">SignedOut</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A SignedOut component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/control.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">signed_out</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignedOut</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;SignedOut&gt; component renders its children only if there&#39;s no User with an active Session signed in your application.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *children: Zero or more child components that will be rendered inside the SignedOut component.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SignedOut component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">SignedOut</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="reflex_clerk.redirect_to_sign_in" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.redirect_to_sign_in</span>
+
+
+<a href="#reflex_clerk.redirect_to_sign_in" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">redirect_to_sign_in</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <RedirectToSignIn /> component navigates to the sign-in URL configured in your application instance.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.control.RedirectToSignIn">RedirectToSignIn</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A RedirectToSignIn component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/control.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">redirect_to_sign_in</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">RedirectToSignIn</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;RedirectToSignIn /&gt; component navigates to the sign-in URL configured in your application instance.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A RedirectToSignIn component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">RedirectToSignIn</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="reflex_clerk.redirect_to_sign_up" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.redirect_to_sign_up</span>
+
+
+<a href="#reflex_clerk.redirect_to_sign_up" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">redirect_to_sign_up</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <RedirectToSignUp /> component navigates to the sign-up URL configured in your application instance.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.control.RedirectToSignUp">RedirectToSignUp</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A RedirectToSignUp component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/control.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">redirect_to_sign_up</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">RedirectToSignUp</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;RedirectToSignUp /&gt; component navigates to the sign-up URL configured in your application instance.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A RedirectToSignUp component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">RedirectToSignUp</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="reflex_clerk.redirect_to_user_profile" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.redirect_to_user_profile</span>
+
+
+<a href="#reflex_clerk.redirect_to_user_profile" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">redirect_to_user_profile</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <RedirectToUserProfile /> component navigates to the user profile URL configured in your application instance.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.control.RedirectToUserProfile">RedirectToUserProfile</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A RedirectToUserProfile component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/control.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">redirect_to_user_profile</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">RedirectToUserProfile</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;RedirectToUserProfile /&gt; component navigates to the user profile URL configured in your application instance.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A RedirectToUserProfile component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">RedirectToUserProfile</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="reflex_clerk.redirect_to_organization_profile" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.redirect_to_organization_profile</span>
+
+
+<a href="#reflex_clerk.redirect_to_organization_profile" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">redirect_to_organization_profile</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <RedirectToOrganizationProfile /> component navigates to the organization profile URL configured in your application instance.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.control.RedirectToOrganizationProfile">RedirectToOrganizationProfile</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A RedirectToOrganizationProfile component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/control.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">redirect_to_organization_profile</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">RedirectToOrganizationProfile</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;RedirectToOrganizationProfile /&gt; component navigates to the organization profile URL configured in your application instance.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A RedirectToOrganizationProfile component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">RedirectToOrganizationProfile</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="reflex_clerk.redirect_to_create_organization" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.redirect_to_create_organization</span>
+
+
+<a href="#reflex_clerk.redirect_to_create_organization" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">redirect_to_create_organization</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <RedirectToCreateOrganization /> component navigates to the create organization URL configured in your application instance.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>*children</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="reflex.Component" href="https://reflex.dev/docs/api-reference/component/#component">Component</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Zero or more child components that will be rendered inside the RedirectToCreateOrganization component.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.control.RedirectToCreateOrganization">RedirectToCreateOrganization</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A RedirectToCreateOrganization component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/control.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">redirect_to_create_organization</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RedirectToCreateOrganization</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;RedirectToCreateOrganization /&gt; component navigates to the create organization URL configured in your application instance.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *children: Zero or more child components that will be rendered inside the RedirectToCreateOrganization component.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A RedirectToCreateOrganization component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">RedirectToCreateOrganization</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="reflex_clerk.multisession_app_support" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.multisession_app_support</span>
+
+
+<a href="#reflex_clerk.multisession_app_support" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">multisession_app_support</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <MultisessionAppSupport> provides a wrapper for your React application that guarantees a full rerendering cycle everytime the current session and user changes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>*children</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="reflex.Component" href="https://reflex.dev/docs/api-reference/component/#component">Component</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Zero or more child components that will be rendered inside the MultisessionAppSupport component.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.control.MultisessionAppSupport">MultisessionAppSupport</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A MultisessionAppSupport component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/control.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">multisession_app_support</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MultisessionAppSupport</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;MultisessionAppSupport&gt; provides a wrapper for your React application that guarantees a full rerendering cycle everytime the current session and user changes.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *children: Zero or more child components that will be rendered inside the MultisessionAppSupport component.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A MultisessionAppSupport component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">MultisessionAppSupport</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="reflex_clerk.clerk_loading" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.clerk_loading</span>
+
+
+<a href="#reflex_clerk.clerk_loading" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">clerk_loading</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <ClerkLoading> component indicates that Clerk is still loading.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>*children</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="reflex.Component" href="https://reflex.dev/docs/api-reference/component/#component">Component</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Zero or more child components that will be rendered inside the ClerkLoading component.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.control.ClerkLoading">ClerkLoading</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A ClerkLoading component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/control.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">clerk_loading</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClerkLoading</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;ClerkLoading&gt; component indicates that Clerk is still loading.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *children: Zero or more child components that will be rendered inside the ClerkLoading component.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A ClerkLoading component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">ClerkLoading</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="reflex_clerk.clerk_loaded" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.clerk_loaded</span>
+
+
+<a href="#reflex_clerk.clerk_loaded" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">clerk_loaded</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <ClerkLoaded> component indicates that Clerk is fully loaded.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>*children</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="reflex.Component" href="https://reflex.dev/docs/api-reference/component/#component">Component</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Zero or more child components that will be rendered inside the ClerkLoaded component.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.control.ClerkLoaded">ClerkLoaded</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A ClerkLoaded component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/control.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">clerk_loaded</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClerkLoaded</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;ClerkLoaded&gt; component indicates that Clerk is fully loaded.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *children: Zero or more child components that will be rendered inside the ClerkLoaded component.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A ClerkLoaded component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">ClerkLoaded</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="reflex_clerk.protect" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">reflex_clerk.protect</span>
+
+
+<a href="#reflex_clerk.protect" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">protect</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fallback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">permission</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+      <p>The <Protect> component conditionally renders its children based on the provided logic.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>*children</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="reflex.Component" href="https://reflex.dev/docs/api-reference/component/#component">Component</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Zero or more child components that will be rendered inside the Protect component.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>condition</code></td>
+            <td>
+                  <code><span title="reflex_clerk.lib.control.Javascript">Javascript</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional conditional logic that renders the children if it returns true.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fallback</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" title="reflex.Component" href="https://reflex.dev/docs/api-reference/component/#component">Component</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An optional snippet of JSX to show when a user doesn't have the role or permission to access the protected content.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>permission</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional string corresponding to a Role's Permission in the format org:<resource>:<action>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>role</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional string corresponding to an Organization's Role in the format org:<role>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="reflex_clerk.lib.control.Protect">Protect</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A Protect component instance that can be rendered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>custom_components/reflex_clerk/lib/control.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">protect</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">,</span>
+        <span class="n">condition</span><span class="p">:</span> <span class="n">Javascript</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">fallback</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">rx</span><span class="o">.</span><span class="n">Component</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">permission</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">role</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Protect</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &lt;Protect&gt; component conditionally renders its children based on the provided logic.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *children: Zero or more child components that will be rendered inside the Protect component.</span>
+<span class="sd">        condition: Optional conditional logic that renders the children if it returns true.</span>
+<span class="sd">        fallback: An optional snippet of JSX to show when a user doesn&#39;t have the role or permission to access the protected content.</span>
+<span class="sd">        permission: Optional string corresponding to a Role&#39;s Permission in the format org:&lt;resource&gt;:&lt;action&gt;.</span>
+<span class="sd">        role: Optional string corresponding to an Organization&#39;s Role in the format org:&lt;role&gt;.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A Protect component instance that can be rendered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Protect</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">children</span><span class="p">,</span>
+        <span class="n">condition</span><span class="o">=</span><span class="n">condition</span><span class="p">,</span>
+        <span class="n">fallback</span><span class="o">=</span><span class="n">fallback</span><span class="p">,</span>
+        <span class="n">permission</span><span class="o">=</span><span class="n">permission</span><span class="p">,</span>
+        <span class="n">role</span><span class="o">=</span><span class="n">role</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
+      
+    
+  </body>
+</html>
