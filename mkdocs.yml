@@ -1,0 +1,47 @@
+site_name: Reflex Clerk
+
+theme:
+  name: material
+  features:
+    - header.autohide
+  palette:
+    primary: white
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - admonition
+
+
+nav:
+  - Home: index.md
+  - Page Setup: page_setup.md
+  - Auth State: clerk_state.md
+  - Components:
+    - ClerkProvider Component: clerk_provider.md
+    - UI Components: ui_components.md
+    - Control Components: control_components.md
+
+plugins:
+  - search
+  - link-marker
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          import:
+            - https://docs.python.org/3/objects.inv
+            - https://docs.pydantic.dev/latest/objects.inv
+            - url: file:docs/objects_reflex.inv
+              base_url: https://reflex.dev/
+          options:
+            find_stubs_package: true
+            modernize_annotations: true
+            annotations_path: brief

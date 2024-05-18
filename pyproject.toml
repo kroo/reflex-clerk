@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reflex-clerk"
+version = "1.0.0"
+description = "Reflex custom component library for Clerk, a user management platform"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.8"
+authors = [{ name = "Elliot Kroo", email = "elliot@kroo.net" }]
+keywords = ["reflex","reflex-custom-components"]
+
+dependencies = ["reflex>=0.5.0"]
+
+classifiers = ["Development Status :: 4 - Beta"]
+
+[project.urls]
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+[tool.setuptools.packages.find]
+where = ["custom_components"]
