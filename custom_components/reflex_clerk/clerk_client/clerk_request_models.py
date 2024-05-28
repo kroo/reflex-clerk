@@ -1,25 +1,25 @@
 from typing import Optional, List
 
-from pydantic import BaseModel
+from reflex.base import pydantic
 
 
-class VerifyClientRequest(BaseModel):
+class VerifyClientRequest(pydantic.BaseModel):
     token: str
 
 
-class CreateEmailAddressRequest(BaseModel):
+class CreateEmailAddressRequest(pydantic.BaseModel):
     user_id: str
     email_address: str
     verified: Optional[bool] = None
     primary: Optional[bool] = None
 
 
-class UpdateEmailAddressRequest(BaseModel):
+class UpdateEmailAddressRequest(pydantic.BaseModel):
     verified: Optional[bool] = None
     primary: Optional[bool] = None
 
 
-class CreatePhoneNumberRequest(BaseModel):
+class CreatePhoneNumberRequest(pydantic.BaseModel):
     user_id: str
     phone_number: str
     verified: Optional[bool] = None
@@ -27,13 +27,13 @@ class CreatePhoneNumberRequest(BaseModel):
     reserved_for_second_factor: Optional[bool] = None
 
 
-class UpdatePhoneNumberRequest(BaseModel):
+class UpdatePhoneNumberRequest(pydantic.BaseModel):
     verified: Optional[bool] = None
     primary: Optional[bool] = None
     reserved_for_second_factor: Optional[bool] = None
 
 
-class CreateUserRequest(BaseModel):
+class CreateUserRequest(pydantic.BaseModel):
     external_id: Optional[str] = None
     first_name: Optional[str] = None
     last_name: Optional[str] = None
@@ -54,7 +54,7 @@ class CreateUserRequest(BaseModel):
     created_at: Optional[str] = None
 
 
-class UpdateUserRequest(BaseModel):
+class UpdateUserRequest(pydantic.BaseModel):
     external_id: Optional[str] = None
     first_name: Optional[str] = None
     last_name: Optional[str] = None
@@ -69,7 +69,7 @@ class UpdateUserRequest(BaseModel):
     password_hasher: Optional[str] = None
 
 
-class UpsertTemplateRequest(BaseModel):
+class UpsertTemplateRequest(pydantic.BaseModel):
     name: str
     subject: Optional[str] = None
     markup: Optional[str] = None
@@ -79,36 +79,36 @@ class UpsertTemplateRequest(BaseModel):
     reply_to_email_name: Optional[str] = None
 
 
-class PreviewTemplateRequest(BaseModel):
+class PreviewTemplateRequest(pydantic.BaseModel):
     subject: Optional[str] = None
     body: str
     from_email_name: Optional[str] = None
     reply_to_email_name: Optional[str] = None
 
 
-class ToggleTemplateDeliveryRequest(BaseModel):
+class ToggleTemplateDeliveryRequest(pydantic.BaseModel):
     delivered_by_clerk: Optional[bool] = None
 
 
-class VerifySessionRequest(BaseModel):
+class VerifySessionRequest(pydantic.BaseModel):
     token: str
 
 
-class CreateSessionTokenFromTemplateRequest(BaseModel):
+class CreateSessionTokenFromTemplateRequest(pydantic.BaseModel):
     pass
 
 
-class GetPublicInterstitialParams(BaseModel):
+class GetPublicInterstitialParams(pydantic.BaseModel):
     frontendApi: Optional[str] = None
     publishable_key: Optional[str] = None
 
 
-class GetClientListParams(BaseModel):
+class GetClientListParams(pydantic.BaseModel):
     limit: Optional[int] = None
     offset: Optional[int] = None
 
 
-class GetSessionListParams(BaseModel):
+class GetSessionListParams(pydantic.BaseModel):
     client_id: Optional[str] = None
     user_id: Optional[str] = None
     status: Optional[str] = None
@@ -116,7 +116,7 @@ class GetSessionListParams(BaseModel):
     offset: Optional[int] = None
 
 
-class GetUserListParams(BaseModel):
+class GetUserListParams(pydantic.BaseModel):
     email_address: Optional[List[str]] = None
     phone_number: Optional[List[str]] = None
     external_id: Optional[List[str]] = None
@@ -131,7 +131,7 @@ class GetUserListParams(BaseModel):
     order_by: Optional[str] = None
 
 
-class GetUsersCountParams(BaseModel):
+class GetUsersCountParams(pydantic.BaseModel):
     email_address: Optional[List[str]] = None
     phone_number: Optional[List[str]] = None
     external_id: Optional[List[str]] = None
