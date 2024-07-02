@@ -1,6 +1,9 @@
 import typing
 
-from reflex.base import pydantic
+try:
+    from reflex.base import pydantic
+except ImportError:
+    import pydantic
 
 
 class AppearanceVariables(pydantic.BaseModel):
