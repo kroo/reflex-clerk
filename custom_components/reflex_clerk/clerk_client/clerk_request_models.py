@@ -1,6 +1,9 @@
 from typing import Optional, List
 
-from reflex.base import pydantic
+try:
+    from reflex.base import pydantic
+except ImportError:
+    import pydantic
 
 
 class VerifyClientRequest(pydantic.BaseModel):
