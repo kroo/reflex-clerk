@@ -6,3 +6,6 @@ dist/
 .idea
 site/
 venv
+.env
+.env.local
+.tool-versions
