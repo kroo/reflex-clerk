@@ -244,6 +244,8 @@ class ClerkSessionSynchronizer(rx.Component):
         return addl_imports
 
     def add_custom_code(self) -> list[str]:
+        clerk_state_name = ClerkState.get_full_name()
+
         return [
             """
 function ClerkSessionSynchronizer({ children }) {
@@ -254,10 +256,10 @@ function ClerkSessionSynchronizer({ children }) {
       if (isLoaded && !!addEvents) {
         if (isSignedIn) {
           getToken().then(token => {
-            addEvents([Event("state.clerk_state.set_clerk_session", {token})])
+            addEvents([Event("%s.set_clerk_session", {token})])
           })
         } else {
-          addEvents([Event("state.clerk_state.clear_clerk_session")])
+          addEvents([Event("%s.clear_clerk_session")])
         }
       }
   }, [isSignedIn])      
@@ -266,7 +268,7 @@ function ClerkSessionSynchronizer({ children }) {
       <>{children}</>
   )
 }
-"""
+""" % (clerk_state_name, clerk_state_name)
         ]
 
 
