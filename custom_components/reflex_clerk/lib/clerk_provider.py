@@ -229,6 +229,27 @@ class ClerkState(rx.State):
             user = self.clerk_api_client.get_user(self.user_id)
             self.set_user(user)
 
+    async def get_oauth_access_token(self, provider: str) -> str:
+        """
+        Fetches the OAuth access token for the specified provider.
+
+        Args:
+            provider (str): The OAuth provider (e.g., 'oauth_notion')
+
+        Returns:
+            str: The OAuth access token
+
+        Raises:
+            ValueError: If the user is not authenticated or the token fetch fails
+        """
+        if not self.is_signed_in or not self.user_id:
+            raise ValueError("User is not authenticated")
+
+        try:
+            return self.clerk_api_client.get_user_oauth_access_token(self.user_id, provider)
+        except Exception as e:
+            raise ValueError(f"Failed to fetch OAuth token: {str(e)}")
+
 
 class ClerkSessionSynchronizer(rx.Component):
     """ClerkSessionSynchronizer component."""
