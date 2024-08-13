@@ -168,6 +168,17 @@ class ClerkAPIClient(object):
         url = self._get_url(f"/users/{user_id}")
         response = requests.patch(url, headers=self.headers, json=data.dict())
         return self._handle_response(response, User)
+    
+    def get_user_oauth_access_token(self, user_id: str, provider: str) -> str:
+        url = self._get_url(f"/users/{user_id}/oauth_access_tokens/{provider}")
+        response = requests.get(url, headers=self.headers)
+        data = response.json()
+        if isinstance(data, list) and len(data) > 0:
+            for item in data:
+                if 'scopes' in item and len(item.get('scopes')) > 0:
+                    return item['token']
+        else:
+            raise ValueError("Invalid response format. Expected a non-empty list.")
 
 
 BASE_URL = "https://api.clerk.com/v1"
