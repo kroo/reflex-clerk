@@ -46,6 +46,7 @@ class Verification(pydantic.BaseModel):
             "oauth_google", "oauth_mock", "admin",
             "phone_code", "email_code", "reset_password_email_code",
             "web3_metamask_signature", "from_oauth_google",
+            "oauth_notion", "from_oauth_notion"
         ]]
     status: Optional[Literal['unverified', 'verified', 'transferable', 'failed', 'expired']]
     nonce: Optional[str] = None
@@ -60,10 +61,10 @@ class IdentificationLink(pydantic.BaseModel):
     Represents a link between an email address or phone number and another identification type.
 
     Attributes:
-        type: One of "oauth_google", "oauth_mock", or "saml"
+        type: One of "oauth_google", "oauth_mock", "saml", or "oauth_notion"
         id: A unique identifier for this link.
     """
-    type: Literal["oauth_google", "oauth_mock", "saml"]
+    type: Literal["oauth_google", "oauth_mock", "saml", "oauth_notion"]
     id: str
 
 
