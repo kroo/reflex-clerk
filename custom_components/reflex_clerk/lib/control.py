@@ -36,6 +36,16 @@ class ClerkLoading(rx.Component):
     tag = "ClerkLoading"
 
 
+class OrganizationSwitcher(rx.Component):
+    """OrganizationSwitcher component."""
+
+    # The React library to wrap.
+    library = "@clerk/clerk-react"
+
+    # The React component tag.
+    tag = "OrganizationSwitcher"
+
+
 class Protect(rx.Component):
     """Protect component."""
 
@@ -207,6 +217,19 @@ def clerk_loading(*children: rx.Component) -> ClerkLoading:
         A ClerkLoading component instance that can be rendered.
     """
     return ClerkLoading.create(*children)
+
+
+def organization_switcher(*children: rx.Component) -> OrganizationSwitcher:
+    """
+    The <OrganizationSwitcher> component allows a user to switch between their account types - their personal account and their joined organizations.
+
+    Args:
+        *children: Zero or more child components that will be rendered inside the OrganizationSwitcher component.
+
+    Returns:
+        A OrganizationSwitcher component instance that can be rendered.
+    """
+    return OrganizationSwitcher.create(*children)
 
 
 def protect(
