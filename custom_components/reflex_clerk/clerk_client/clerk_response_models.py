@@ -1,37 +1,37 @@
 from typing import Optional, List, Dict, Any, Literal
 
-try:
-    from reflex.base import pydantic
-except ImportError:
-    import pydantic
+import reflex as rx
 
 
-class ClerkError(pydantic.BaseModel):
+class ClerkError(rx.Base):
     """
     Represents an error response from the Clerk API.
     """
+
     message: str
     code: Optional[int] = None
 
 
-class DeletedObjectResponse(pydantic.BaseModel):
+class DeletedObjectResponse(rx.Base):
     """
     Represents the response for a successfully deleted object.
     """
+
     deleted: bool
     object: str
 
 
-class PaginationMeta(pydantic.BaseModel):
+class PaginationMeta(rx.Base):
     """
     Metadata for pagination.
     """
+
     total_count: int
     limit: int
     offset: int
 
 
-class Verification(pydantic.BaseModel):
+class Verification(rx.Base):
     """
     Represents the verification details of an email address or phone number.
 
@@ -41,13 +41,24 @@ class Verification(pydantic.BaseModel):
         attempts: The number of attempts related to the verification.
         expire_at: The time the verification will expire at.
     """
+
     strategy: Optional[
         Literal[
-            "oauth_google", "oauth_github", "oauth_mock", "admin",
-            "phone_code", "email_code", "reset_password_email_code",
-            "web3_metamask_signature", "from_oauth_google", "from_oauth_github"
-        ]]
-    status: Optional[Literal['unverified', 'verified', 'transferable', 'failed', 'expired']]
+            "oauth_google",
+            "oauth_github",
+            "oauth_mock",
+            "admin",
+            "phone_code",
+            "email_code",
+            "reset_password_email_code",
+            "web3_metamask_signature",
+            "from_oauth_google",
+            "from_oauth_github",
+        ]
+    ]
+    status: Optional[
+        Literal["unverified", "verified", "transferable", "failed", "expired"]
+    ]
     nonce: Optional[str] = None
     attempts: Optional[int] = None
     expire_at: Optional[int] = None
@@ -55,7 +66,7 @@ class Verification(pydantic.BaseModel):
     external_verification_redirect_url: Optional[str] = None
 
 
-class IdentificationLink(pydantic.BaseModel):
+class IdentificationLink(rx.Base):
     """
     Represents a link between an email address or phone number and another identification type.
 
@@ -63,11 +74,12 @@ class IdentificationLink(pydantic.BaseModel):
         type: One of "oauth_google", "oauth_github", "oauth_mock", or "saml"
         id: A unique identifier for this link.
     """
+
     type: Literal["oauth_google", "oauth_github", "oauth_mock", "saml"]
     id: str
 
 
-class EmailAddress(pydantic.BaseModel):
+class EmailAddress(rx.Base):
     """
     Represents an email address associated with a user.
 
@@ -79,8 +91,9 @@ class EmailAddress(pydantic.BaseModel):
         created_at: Unix timestamp of creation
         updated_at: Unix timestamp of latest update
     """
+
     id: str
-    object: Literal['email_address']
+    object: Literal["email_address"]
     email_address: str
     reserved: bool
     verification: Optional[Verification] = None
@@ -89,14 +102,15 @@ class EmailAddress(pydantic.BaseModel):
     updated_at: int
 
 
-class EmailAddressResponse(pydantic.BaseModel):
+class EmailAddressResponse(rx.Base):
     """
     Represents the response containing an email address.
     """
+
     data: EmailAddress
 
 
-class PhoneNumber(pydantic.BaseModel):
+class PhoneNumber(rx.Base):
     """
     Represents a phone number associated with a user.
 
@@ -110,8 +124,9 @@ class PhoneNumber(pydantic.BaseModel):
         created_at: Unix timestamp of creation
         updated_at: Unix timestamp of latest update
     """
+
     id: str
-    object: Literal['phone_number']
+    object: Literal["phone_number"]
     phone_number: str
     reserved_for_second_factor: Optional[bool]
     default_second_factor: Optional[bool]
@@ -123,17 +138,19 @@ class PhoneNumber(pydantic.BaseModel):
     updated_at: int
 
 
-class PhoneNumberResponse(pydantic.BaseModel):
+class PhoneNumberResponse(rx.Base):
     """
     Represents the response containing a phone number.
     """
+
     data: PhoneNumber
 
 
-class Session(pydantic.BaseModel):
+class Session(rx.Base):
     """
     Represents a session object.
     """
+
     id: str
     object: str
     status: str
@@ -144,25 +161,28 @@ class Session(pydantic.BaseModel):
     last_active_at: Optional[int] = None
 
 
-class SessionListResponse(pydantic.BaseModel):
+class SessionListResponse(rx.Base):
     """
     Represents the response containing a list of sessions.
     """
+
     data: List[Session]
     meta: PaginationMeta
 
 
-class SessionResponse(pydantic.BaseModel):
+class SessionResponse(rx.Base):
     """
     Represents the response containing a session.
     """
+
     data: Session
 
 
-class Client(pydantic.BaseModel):
+class Client(rx.Base):
     """
     Represents a client object.
     """
+
     id: str
     object: str
     created_at: int
@@ -174,25 +194,28 @@ class Client(pydantic.BaseModel):
     status: Optional[str] = None
 
 
-class ClientListResponse(pydantic.BaseModel):
+class ClientListResponse(rx.Base):
     """
     Represents the response containing a list of clients.
     """
+
     data: List[Client]
     meta: PaginationMeta
 
 
-class ClientResponse(pydantic.BaseModel):
+class ClientResponse(rx.Base):
     """
     Represents the response containing a client.
     """
+
     data: Client
 
 
-class Template(pydantic.BaseModel):
+class Template(rx.Base):
     """
     Represents a template object for email or SMS.
     """
+
     id: str
     object: str
     name: str
@@ -204,22 +227,24 @@ class Template(pydantic.BaseModel):
     reply_to_email_name: Optional[str] = None
 
 
-class TemplateListResponse(pydantic.BaseModel):
+class TemplateListResponse(rx.Base):
     """
     Represents the response containing a list of templates.
     """
+
     data: List[Template]
     meta: PaginationMeta
 
 
-class TemplateResponse(pydantic.BaseModel):
+class TemplateResponse(rx.Base):
     """
     Represents the response containing a template.
     """
+
     data: Template
 
 
-class Web3Wallet(pydantic.BaseModel):
+class Web3Wallet(rx.Base):
     """
     Represents a Web3 wallet address associated with a user.
 
@@ -239,6 +264,7 @@ class Web3Wallet(pydantic.BaseModel):
         created_at: The date and time when the passkey was created.
         updated_at: The date and time when the passkey was updated.
     """
+
     id: str
     web3_wallet: str
     created_at: int
@@ -246,7 +272,7 @@ class Web3Wallet(pydantic.BaseModel):
     verification: Optional[Verification] = None
 
 
-class SAMLAccount(pydantic.BaseModel):
+class SAMLAccount(rx.Base):
     """
     Represents a SAML account associated with a user.
 
@@ -262,6 +288,7 @@ class SAMLAccount(pydantic.BaseModel):
         public_metadata: Metadata for the SAML account.
         verification: An optional verification object associated with the SAML account.
     """
+
     id: str
     object: str
     provider: str
@@ -274,7 +301,7 @@ class SAMLAccount(pydantic.BaseModel):
     verification: Optional[Verification] = None
 
 
-class PasskeyResource(pydantic.BaseModel):
+class PasskeyResource(rx.Base):
     """
     Represents a passkey associated with a user response.
 
@@ -307,7 +334,7 @@ class PasskeyResource(pydantic.BaseModel):
     """The date and time when the passkey was last used."""
 
 
-class User(pydantic.BaseModel):
+class User(rx.Base):
     """
     Represents a user object with various attributes related to their profile, authentication, and metadata.
 
@@ -436,32 +463,36 @@ class User(pydantic.BaseModel):
     """A boolean indicating whether the user is locked."""
 
 
-class UserListResponse(pydantic.BaseModel):
+class UserListResponse(rx.Base):
     """
     Represents the response containing a list of users.
     """
+
     data: List[User]
     meta: PaginationMeta
 
 
-class UserCountResponse(pydantic.BaseModel):
+class UserCountResponse(rx.Base):
     """
     Represents the response containing the count of users.
     """
+
     count: int
 
 
-class InterstitialResponse(pydantic.BaseModel):
+class InterstitialResponse(rx.Base):
     """
     Represents the response containing the interstitial HTML.
     """
+
     html: str
 
 
-class Key(pydantic.BaseModel):
+class Key(rx.Base):
     """
     Represents a key in the JSON Web Key Set (JWKS).
     """
+
     kty: str
     use: str
     kid: str
@@ -469,8 +500,9 @@ class Key(pydantic.BaseModel):
     e: str
 
 
-class JWKSResponse(pydantic.BaseModel):
+class JWKSResponse(rx.Base):
     """
     Represents the response containing the JSON Web Key Set (JWKS).
     """
+
     keys: List[Key]
