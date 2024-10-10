@@ -33,7 +33,7 @@ class SignUp(rx.Component):
     library = "@clerk/clerk-react"
 
     # The React component tag.
-    tag = "SignIn"
+    tag = "SignUp"
 
     appearance: Appearance = None
     """Optional object to style your components. Will only affect Clerk Components and not Account Portal pages."""
