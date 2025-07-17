@@ -1,3 +1,15 @@
+
+"""Reflex custom control_components.md components for Clerk."""
+import typing
+from typing import Union
+
+import reflex as rx
+from reflex import ImportVar
+from reflex.utils.serializers import serializer
+
+# Use shared SafeReflexComponent (local import after stdlib/3rd party)
+from .safe_component import SafeReflexComponent
+
 """Reflex custom control_components.md components for Clerk."""
 import typing
 from typing import Union
@@ -16,7 +28,7 @@ def serialize_javascript(obj: Javascript) -> str:
     return f"{{{obj}}}"
 
 
-class ClerkLoaded(rx.Component):
+class ClerkLoaded(SafeReflexComponent):
     """ClerkLoaded component."""
 
     # The React library to wrap.
@@ -26,7 +38,7 @@ class ClerkLoaded(rx.Component):
     tag = "ClerkLoaded"
 
 
-class ClerkLoading(rx.Component):
+class ClerkLoading(SafeReflexComponent):
     """ClerkLoading component."""
 
     # The React library to wrap.
@@ -36,7 +48,7 @@ class ClerkLoading(rx.Component):
     tag = "ClerkLoading"
 
 
-class Protect(rx.Component):
+class Protect(SafeReflexComponent):
     """Protect component."""
 
     # The React library to wrap.
@@ -73,7 +85,7 @@ class Protect(rx.Component):
         return {}
 
 
-class MultisessionAppSupport(rx.Component):
+class MultisessionAppSupport(SafeReflexComponent):
     """
     The <MultisessionAppSupport> provides a wrapper for your React application
     that guarantees a full rerendering cycle everytime the current session and
@@ -87,7 +99,7 @@ class MultisessionAppSupport(rx.Component):
     tag = "MultisessionAppSupport"
 
 
-class RedirectToSignIn(rx.Component):
+class RedirectToSignIn(SafeReflexComponent):
     """
     The <RedirectToSignIn /> component will navigate to the sign in URL which has
     been configured in your application instance. The behavior will be just like a
@@ -101,7 +113,7 @@ class RedirectToSignIn(rx.Component):
     tag = "RedirectToSignIn"
 
 
-class RedirectToSignUp(rx.Component):
+class RedirectToSignUp(SafeReflexComponent):
     """
     The <RedirectToSignUp /> component will navigate to the sign in URL which has
     been configured in your application instance. The behavior will be just like a
@@ -115,7 +127,7 @@ class RedirectToSignUp(rx.Component):
     tag = "RedirectToSignUp"
 
 
-class RedirectToUserProfile(rx.Component):
+class RedirectToUserProfile(SafeReflexComponent):
     """
     The <RedirectToUserProfile /> component will navigate to the sign in URL which has
     been configured in your application instance. The behavior will be just like a
@@ -129,7 +141,7 @@ class RedirectToUserProfile(rx.Component):
     tag = "RedirectToUserProfile"
 
 
-class RedirectToOrganizationProfile(rx.Component):
+class RedirectToOrganizationProfile(SafeReflexComponent):
     """
     The <RedirectToOrganizationProfile /> component will navigate to the sign in URL which has
     been configured in your application instance. The behavior will be just like a
@@ -143,7 +155,7 @@ class RedirectToOrganizationProfile(rx.Component):
     tag = "RedirectToOrganizationProfile"
 
 
-class RedirectToCreateOrganization(rx.Component):
+class RedirectToCreateOrganization(SafeReflexComponent):
     """
     The <RedirectToCreateOrganization /> component will navigate to the sign in URL which has
     been configured in your application instance. The behavior will be just like a
@@ -157,7 +169,7 @@ class RedirectToCreateOrganization(rx.Component):
     tag = "RedirectToCreateOrganization"
 
 
-class SignedIn(rx.Component):
+class SignedIn(SafeReflexComponent):
     """
     The <SignedIn> component offers authentication checks as a cross-cutting concern. Any
     children components wrapped by a <SignedIn> component will be rendered only if there's
@@ -170,7 +182,7 @@ class SignedIn(rx.Component):
     tag = "SignedIn"
 
 
-class SignedOut(rx.Component):
+class SignedOut(SafeReflexComponent):
     """
     The <SignedOut> component offers authentication checks as a cross-cutting concern. Any
     children components wrapped by a <SignedOut> component will be rendered only if there's

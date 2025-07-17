@@ -1,3 +1,5 @@
+
+
 import json
 import logging
 import os
@@ -13,6 +15,9 @@ from reflex_clerk.clerk_client import clerk_client, clerk_response_models
 from reflex_clerk.clerk_client.clerk_client import ClerkAPIClient
 
 
+# Use shared SafeReflexComponent
+from .safe_component import SafeReflexComponent
+    
 @serializer
 def serialize_exception(e: Exception) -> dict:
     return {"error": str(e)}
@@ -229,7 +234,7 @@ class ClerkState(rx.State):
             self.set_user(user)
 
 
-class ClerkSessionSynchronizer(rx.Component):
+class ClerkSessionSynchronizer(SafeReflexComponent):
     """ClerkSessionSynchronizer component."""
     tag = "ClerkSessionSynchronizer"
 
@@ -271,7 +276,7 @@ function ClerkSessionSynchronizer({ children }) {
         ]
 
 
-class ClerkProvider(rx.Component):
+class ClerkProvider(SafeReflexComponent):
     """ClerkProvider component."""
 
     # The React library to wrap.

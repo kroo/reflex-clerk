@@ -357,13 +357,13 @@ class User(pydantic.BaseModel):
     primary_email_address_id: str
     """The unique identifier for the EmailAddress that the user has set as primary."""
 
-    primary_phone_number_id: str
+    primary_phone_number_id: Optional[str] = None
     """The unique identifier for the PhoneNumber that the user has set as primary."""
 
-    primary_web3_wallet_id: str
+    primary_web3_wallet_id: Optional[str] = None
     """The unique identifier for the Web3Wallet that the user signed up with."""
 
-    username: str
+    username: Optional[str] = None
     """The user's username."""
 
     first_name: str
